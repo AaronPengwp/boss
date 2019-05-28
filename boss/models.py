@@ -25,7 +25,7 @@ class ProxyModel(object):
     @property
     def is_expiring(self):
         now = datetime.now()
-        if (self.expire_time - now) < timedelta(seconds=5):
+        if (self.expire_time - now) < timedelta(seconds=5): #seconds=5 5s后过期
             return True
         else:
             return False
